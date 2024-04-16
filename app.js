@@ -29,7 +29,9 @@ db.connect((err) => {
         });
 
         // Render the form page
-       
+         app.get('/', (req, res) => {
+            res.render('app.ejs'); 
+        });
 
         // Handle form submission
         app.post('/post', (req, res) => {
