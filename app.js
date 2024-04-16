@@ -43,7 +43,7 @@ db.connect((err) => {
             try {
                 db.query("INSERT INTO users (username, email,name,password,security_question,security_answer) VALUES ($1, $2,$3,$4,$5,$6)", [username, email, name, password, question, answer])
                     .then(result => {
-                        res.redirect('/get');
+                       console.log("hello");
                     })
                     .catch(error => {
                         console.error(error);
